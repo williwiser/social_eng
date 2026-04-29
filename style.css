@@ -1,0 +1,102 @@
+* {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "GRAD" 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+img {
+  width: 70px;
+}
+
+h2,
+h4 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-header {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  border-radius: 10px;
+  border: 1px rgb(190, 190, 190) solid;
+  padding: 60px 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #4285f4;
+}
+
+button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  border: none;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.details {
+  font-size: small;
+}
+
+legend {
+  font-size: small;
+  color: rgb(116, 116, 116);
+}
+
+fieldset {
+  border: 1px rgb(190, 190, 190) solid;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin: 10px 0;
+}
+
+fieldset:focus-within {
+  /* Creates the outline on click/focus */
+  border-width: 2px;
+  border-color: #4285f4; /* Optional: matches the border to the outline */
+}
+
+.guest,
+label {
+  color: gray;
+}
+
+.forgot-im {
+  margin-bottom: 40px;
+}
